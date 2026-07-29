@@ -1,36 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <head>
-    <title>CodeMaster</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodeMaster</title>
+<link rel="stylesheet" href="style.css">
 </head>
-</head>
+
 <body>
-    <h1>Welcome to CodeMaster</h1>
-    <p>Learn Python, Java, C, HTML, CSS and SQL for Free</p>
-<a href="register.html">
-    <button>Register</button>
+
+<div class="container">
+
+<img src="logo.png" class="logo">
+
+<h1>Welcome to CodeMaster</h1>
+
+<p>Learn Programming from Basic to Advanced</p>
+
+<a href="dashboard.html">
+<button class="start-btn">Start Learning</button>
 </a>
-    <button>Register</button>
-    <a href="login.html">
-    <button>Login</button>
-</a>
+
+</div>
+
 </body>
 </html>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-<script>
-emailjs.init("YOUR_PUBLIC_KEY");
-
-document.getElementById("registerForm").addEventListener("submit", function(e){
-    e.preventDefault();
-
-    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value
-    }).then(function(){
-        alert("Registration Successful!");
-    });
-});
-</script>
