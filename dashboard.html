@@ -11,6 +11,10 @@ const courses = [
 ];
 
 function searchCourse() {
+  function selectCourse(course){
+    localStorage.setItem("selectedCourse", course);
+    window.location.href = "register.html";
+}
 
   let input = document.getElementById("search").value.toLowerCase();
 
