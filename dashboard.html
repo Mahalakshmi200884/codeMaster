@@ -1,20 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CodeMaster Dashboard</title>
+    <title>CodeMaster</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>CodeMaster</h1>
+<div class="container">
 
-<input type="text" placeholder="🔍 Search Course">
+<h1>Search Your Course</h1>
 
-<div class="courses">
-<h2>Search Your Course</h2>
+<input type="text" id="search" placeholder="🔍 Search Programming Language..." onkeyup="searchCourse()">
 
-<input type="text" placeholder="🔍 Search Programming Language..." class="search-box">
+<div id="result"></div>
+
 </div>
+
+<script>
+function searchCourse(){
+
+let course=document.getElementById("search").value.toLowerCase();
+
+let result=document.getElementById("result");
+
+if(course=="python"){
+result.innerHTML='<a href="register.html"><button>🐍 Python</button></a>';
+}
+else if(course=="java"){
+result.innerHTML='<a href="register.html"><button>☕ Java</button></a>';
+}
+else if(course=="c"){
+result.innerHTML='<a href="register.html"><button>💻 C</button></a>';
+}
+else if(course=="html"){
+result.innerHTML='<a href="register.html"><button>🌐 HTML</button></a>';
+}
+else if(course=="css"){
+result.innerHTML='<a href="register.html"><button>🎨 CSS</button></a>';
+}
+else if(course=="sql"){
+result.innerHTML='<a href="register.html"><button>🗄 SQL</button></a>';
+}
+else{
+result.innerHTML="";
+}
+
+}
+</script>
 
 </body>
 </html>
