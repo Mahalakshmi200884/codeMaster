@@ -15,8 +15,12 @@ function searchCourse() {
   let input = document.getElementById("search").value.toLowerCase();
 
   let result = document.getElementById("result");
-
-  result.innerHTML = "";
+  
+  result.innerHTML += `
+<a href="#" onclick="selectCourse('${course}')">
+<button>${course}</button>
+</a><br><br>
+`;
 
   if(input === "") return;
 
