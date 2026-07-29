@@ -22,6 +22,38 @@
 </a>
 
 </div>
+<input type="text" id="search" placeholder="Search Course..." onkeyup="searchCourse()">
 
+<div id="result"></div>
+  <script>
+const courses = [
+    "Python",
+    "Java",
+    "C",
+    "HTML",
+    "CSS",
+    "SQL",
+    "JavaScript",
+    "C++"
+];
+
+function searchCourse() {
+    let input = document.getElementById("search").value.toLowerCase();
+    let result = document.getElementById("result");
+
+    result.innerHTML = "";
+
+    if(input === "") return;
+
+    courses.forEach(course => {
+        if(course.toLowerCase().startsWith(input)) {
+            result.innerHTML += `
+            <button onclick="location.href='register.html'">
+                ${course}
+            </button><br><br>`;
+        }
+    });
+}
+</script>
 </body>
 </html>
