@@ -1,52 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>CodeMaster</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<div class="container">
-
-<h1>Search Your Course</h1>
-
-<input type="text" id="search" placeholder="🔍 Search Programming Language..." onkeyup="searchCourse()">
-
-<div id="result"></div>
-
-</div>
-
 <script>
-function searchCourse(){
+const courses = [
+  "Python",
+  "Java",
+  "C",
+  "HTML",
+  "CSS",
+  "SQL",
+  "JavaScript",
+  "C++"
+];
 
-let course=document.getElementById("search").value.toLowerCase();
+function searchCourse() {
 
-let result=document.getElementById("result");
+  let input = document.getElementById("search").value.toLowerCase();
 
-if(course=="python"){
-result.innerHTML='<a href="register.html"><button>🐍 Python</button></a>';
-}
-else if(course=="java"){
-result.innerHTML='<a href="register.html"><button>☕ Java</button></a>';
-}
-else if(course=="c"){
-result.innerHTML='<a href="register.html"><button>💻 C</button></a>';
-}
-else if(course=="html"){
-result.innerHTML='<a href="register.html"><button>🌐 HTML</button></a>';
-}
-else if(course=="css"){
-result.innerHTML='<a href="register.html"><button>🎨 CSS</button></a>';
-}
-else if(course=="sql"){
-result.innerHTML='<a href="register.html"><button>🗄 SQL</button></a>';
-}
-else{
-result.innerHTML="";
-}
+  let result = document.getElementById("result");
+
+  result.innerHTML = "";
+
+  if(input === "") return;
+
+  courses.forEach(function(course){
+
+    if(course.toLowerCase().startsWith(input)){
+
+      result.innerHTML += `
+      <a href="register.html">
+        <button>${course}</button>
+      </a><br><br>
+      `;
+
+    }
+
+  });
 
 }
 </script>
-
-</body>
-</html>
