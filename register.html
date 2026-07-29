@@ -17,6 +17,32 @@
 
         <button type="submit">Register</button>
     </form>
+    <script>
+document.querySelector("form").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let course = localStorage.getItem("selectedCourse");
+
+    if(course === "Python"){
+        window.location.href = "python.html";
+    }
+    else if(course === "Java"){
+        window.location.href = "java.html";
+    }
+    else if(course === "C"){
+        window.location.href = "c.html";
+    }
+    else if(course === "HTML"){
+        window.location.href = "html.html";
+    }
+    else if(course === "CSS"){
+        window.location.href = "css.html";
+    }
+    else if(course === "SQL"){
+        window.location.href = "sql.html";
+    }
+});
+</script>
 
 </body>
 </html>
