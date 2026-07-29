@@ -76,3 +76,9 @@ border:none;
 border-radius:10px;
 cursor:pointer;
 }
+.logo{
+    width:120px;
+    height:120px;
+    display:block;
+    margin:20px auto;
+}
