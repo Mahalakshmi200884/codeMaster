@@ -21,6 +21,36 @@ button {
     margin: 10px;
     border-radius: 5px;
     cursor: pointer;
+    input{
+width:80%;
+padding:12px;
+font-size:18px;
+margin:20px;
+border-radius:10px;
+}
+
+.courses{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+text-decoration:none;
+color:black;
+font-size:22px;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+text-align:center;
+}
+
+.card:hover{
+background:#007bff;
+color:white;
+}
 }
 
 button:hover {
