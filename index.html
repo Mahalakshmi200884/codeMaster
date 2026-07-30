@@ -44,7 +44,7 @@ const courses = [
     if (input == "") return;
 
     courses.forEach(course => {
-        if (course.toLowerCase().startsWith(input)) {
+      if (course.toLowerCase().includes(input)){
 
             let page = "";
 
