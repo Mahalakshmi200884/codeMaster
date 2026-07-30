@@ -26,41 +26,17 @@
 
 <div id="result"></div>
   <script>
-const courses = [
-  "Python",
-  "Java",
-  "C",
-  "HTML",
-  "CSS",
-  "SQL"
-];
+const courses = ["Python","Java","C","HTML","CSS","SQL"];
 
-  function searchCourse() {
+function searchCourse() {
     let input = document.getElementById("search").value.toLowerCase();
     let result = document.getElementById("result");
 
     result.innerHTML = "";
 
-    if (input == "") return;
-
     courses.forEach(course => {
-      if (course.toLowerCase().includes(input)){
-
-            let page = "";
-
-            if(course == "Python") page = "python.html";
-            else if(course == "Java") page = "java.html";
-            else if(course == "HTML") page = "html.html";
-            else if(course == "CSS") page = "css.html";
-            else if(course == "SQL") page = "sql.html";
-            else page = "register.html";
-     result.innerHTML += `
-     result.innerHTML += `
-<button onclick="localStorage.setItem('selectedCourse','${course}');window.location.href='register.html';">
-${course}
-</button><br><br>
-`;
-      
+        if (course.toLowerCase().includes(input)) {
+            result.innerHTML += `<button onclick="localStorage.setItem('selectedCourse','${course}');location.href='register.html';">${course}</button><br><br>`;
         }
     });
 }
