@@ -40,7 +40,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-
 const form = document.querySelector("form");
 
 form.addEventListener("submit", async (e) => {
@@ -52,6 +51,8 @@ form.addEventListener("submit", async (e) => {
     try {
         await createUserWithEmailAndPassword(auth, email, password);
         alert("Registration Successful!");
+        let course = localStorage.getItem("selectedCourse");
+window.location.href = course.toLowerCase() + ".html";
         alert(localStorage.getItem("selectedCourse"));
         let course = localStorage.getItem("selectedCourse");
 
