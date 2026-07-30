@@ -52,9 +52,6 @@ form.addEventListener("submit", async (e) => {
         await createUserWithEmailAndPassword(auth, email, password);
         alert("Registration Successful!");
         let course = localStorage.getItem("selectedCourse");
-window.location.href = course.toLowerCase() + ".html";
-        alert(localStorage.getItem("selectedCourse"));
-        let course = localStorage.getItem("selectedCourse");
 
 if (course === "Python") {
     window.location.href = "python.html";
@@ -69,9 +66,7 @@ if (course === "Python") {
 } else if (course === "SQL") {
     window.location.href = "sql.html";
 }
-
-
-    } catch (error) {
+ {
         alert(error.message);
     }
 });
