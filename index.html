@@ -34,26 +34,35 @@ const courses = [
     "CSS",
     "SQL",
     "JavaScript",
-    "C++"
-];
-
-function searchCourse() {
+    "C
+  }
+  function searchCourse() {
     let input = document.getElementById("search").value.toLowerCase();
     let result = document.getElementById("result");
 
     result.innerHTML = "";
 
-    if(input === "") return;
+    if (input == "") return;
 
     courses.forEach(course => {
-        if(course.toLowerCase().startsWith(input)) {
+        if (course.toLowerCase().startsWith(input)) {
+
+            let page = "";
+
+            if(course == "Python") page = "python.html";
+            else if(course == "Java") page = "java.html";
+            else if(course == "HTML") page = "html.html";
+            else if(course == "CSS") page = "css.html";
+            else if(course == "SQL") page = "sql.html";
+            else page = "register.html";
+
             result.innerHTML += `
-            <button onclick="location.href='register.html'">
-                ${course}
-            </button><br><br>`;
+                <button onclick="location.href='${page}'">
+                    ${course}
+                </button><br><br>
+            `;
         }
     });
 }
-</script>
 </body>
 </html>
