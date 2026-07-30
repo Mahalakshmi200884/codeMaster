@@ -55,14 +55,15 @@ const courses = [
             else if(course == "CSS") page = "css.html";
             else if(course == "SQL") page = "sql.html";
             else page = "register.html";
-
-            result.innerHTML += `
-<button onclick="localStorage.setItem('selectedCourse','${course}'); location.href='register.html'">
-${course}
-</button><br><br>
+     result.innerHTML += `
+     <button onclick="localStorage.setItem('selectedCourse','${course}'); window.location.href='register.html';">
+     ${course}
+     </button><br><br>
 `;
+      
         }
     });
 }
+</script>
 </body>
 </html>
