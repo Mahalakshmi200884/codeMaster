@@ -57,10 +57,10 @@ const courses = [
             else page = "register.html";
 
             result.innerHTML += `
-                <button onclick="location.href='${page}'">
-                    ${course}
-                </button><br><br>
-            `;
+<button onclick="localStorage.setItem('selectedCourse','${course}'); location.href='register.html'">
+${course}
+</button><br><br>
+`;
         }
     });
 }
