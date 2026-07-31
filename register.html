@@ -40,6 +40,14 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
     try {
         await createUserWithEmailAndPassword(auth, email, password);
         alert("Registration Successful!");
+        const course = localStorage.getItem("selectedCourse");
+
+if (!course) {
+    alert("Course not selected");
+    return;
+}
+
+window.location.href = course.toLowerCase() + ".html";
         alert(localStorage.getItem("selectedCourse"));
         alert(localStorage.getItem("selectedCourse"));
 
