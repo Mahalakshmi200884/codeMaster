@@ -1,45 +1,25 @@
-<script>
-const courses = [
-  "Python",
-  "Java",
-  "C",
-  "HTML",
-  "CSS",
-  "SQL",
-  "JavaScript",
-  "C++"
-];
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
 
-  function selectCourse(course){
+<h1>Select Course</h1>
+
+<button onclick="selectCourse('Python')">Python</button>
+<button onclick="selectCourse('Java')">Java</button>
+<button onclick="selectCourse('C')">C</button>
+<button onclick="selectCourse('HTML')">HTML</button>
+<button onclick="selectCourse('CSS')">CSS</button>
+<button onclick="selectCourse('SQL')">SQL</button>
+
+<script>
+function selectCourse(course){
     localStorage.setItem("selectedCourse", course);
     window.location.href = "register.html";
 }
-
-  let input = document.getElementById("search").value.toLowerCase();
-
-  let result = document.getElementById("result");
-  
-  result.innerHTML += `
-<a href="#" onclick="selectCourse('${course}')">
-<button>${course}</button>
-</a><br><br>
-`;
-
-  if(input === "") return;
-
-  courses.forEach(function(course){
-
-    if(course.toLowerCase().startsWith(input)){
-
-      result.innerHTML += `
-      <a href="register.html">
-        <button>${course}</button>
-      </a><br><br>
-      `;
-
-    }
-
-  });
-
-}
 </script>
+
+</body>
+</html>
